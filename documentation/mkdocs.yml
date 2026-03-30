@@ -1,4 +1,4 @@
-site_name: PetBuddy Dokumentation
+site_name: Dokumentation
 site_url: https://dietaube007.github.io/Projektarbeit_2026/
 repo_url: https://github.com/dietaube007/Projektarbeit_2026
 repo_name: dietaube007/Projektarbeit_2026
@@ -6,17 +6,17 @@ repo_name: dietaube007/Projektarbeit_2026
 theme:
   name: material
   language: de
-  favicon: assets/petbuddy_logo.png
+  favicon: assets/petbuddy_logo_2.png
   logo: assets/petbuddy_logo.png
   palette:
     - scheme: default
-      primary: deep purple
+      primary: black
       accent: light blue
       toggle:
         icon: material/brightness-7
         name: Dunkelmodus
     - scheme: slate
-      primary: deep purple
+      primary: black
       accent: light blue
       toggle:
         icon: material/brightness-4
@@ -54,3 +54,4 @@ nav:
   - Installation & Quickstart: installation-quickstart.md
   - Technische Dokumentation: technische-dokumentation.md
   - Nutzungshandbuch: nutzungshandbuch.md
+  - Technische Strategie: technische-strategie.md

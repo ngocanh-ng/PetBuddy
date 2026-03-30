@@ -200,7 +200,7 @@ erDiagram
 | Bucket | Zweck | Limits |
 |--------|-------|--------|
 | `pet-images` | Meldungsfotos | max. 10 MB, komprimiert auf 1920×1920 px |
-| `profile-pictures` | Profilbilder | — |
+| `profile-images` | Profilbilder | — |
 
 ---
 

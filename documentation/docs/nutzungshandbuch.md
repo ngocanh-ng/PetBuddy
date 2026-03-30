@@ -103,7 +103,7 @@ Alle Filter können über **„Filter zurücksetzen"** auf den Standard zurückg
 
 | Feld | Beschreibung |
 |------|-------------|
-| **Name / Titel** | z. B. „Grauer Kater vermisst" (max. 150 Zeichen) |
+| **Name / Titel** | z. B. „Grauer Kater vermisst" (max. 50 Zeichen) |
 | **Tierart** | Auswahl per Dropdown |
 
 ### Optionale Felder
@@ -112,7 +112,7 @@ Alle Filter können über **„Filter zurücksetzen"** auf den Standard zurückg
 |------|-------------|
 | **Rasse** | Wird nach Tierart-Auswahl geladen |
 | **Geschlecht** | Männlich / Weiblich / Unbekannt |
-| **Beschreibung** | Merkmale, Verhalten, Hinweise (max. 1000 Zeichen) |
+| **Beschreibung** | Merkmale, Verhalten, Hinweise (max. 2000 Zeichen) |
 | **Farben** | Mehrfachauswahl per Checkboxen |
 | **Ort** | Ortsname eingeben → Mapbox-Autocomplete wählt Standort |
 | **Datum** | Standardmäßig heute |
