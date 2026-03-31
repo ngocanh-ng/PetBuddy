@@ -10,13 +10,13 @@ theme:
   logo: assets/petbuddy_logo.png
   palette:
     - scheme: default
-      primary: black
+      primary: deep purple
       accent: light blue
       toggle:
         icon: material/brightness-7
         name: Dunkelmodus
     - scheme: slate
-      primary: black
+      primary: deep purple
       accent: light blue
       toggle:
         icon: material/brightness-4
@@ -32,9 +32,12 @@ theme:
 
 plugins:
   - search
+  - glightbox
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
@@ -51,7 +54,30 @@ markdown_extensions:
 
 nav:
   - Home: index.html
-  - Installation & Quickstart: installation-quickstart.md
-  - Technische Dokumentation: technische-dokumentation.md
-  - Nutzungshandbuch: nutzungshandbuch.md
-  - Technische Strategie: technische-strategie.md
+  - Installation & Quickstart:
+    - Übersicht: installation-quickstart/index.md
+    - Voraussetzungen: installation-quickstart/voraussetzungen.md
+    - Schritt-für-Schritt-Anleitung: installation-quickstart/anleitung.md
+    - Konfiguration: installation-quickstart/konfiguration.md
+    - Häufige Fehlerbilder: installation-quickstart/haeufige_fehlerbilder.md
+  - Technische Dokumentation:
+    - Übersicht: technische-dokumentation/index.md
+    - Technische Strategie: technische-dokumentation/technische-strategie.md
+    - Architekturdiagramm: technische-dokumentation/architekturdiagramm.md
+    - Datenbankmodell: technische-dokumentation/datenbankmodell.md
+    - Klassendiagramm: technische-dokumentation/klassendiagramm.md
+    - API-Referenz: technische-dokumentation/api-referenz.md
+    - Dateistruktur: technische-dokumentation/dateistruktur.md
+    - Herausforderungen & Lösungen: technische-dokumentation/herausforderungen.md
+  - Nutzungshandbuch: 
+    - Übersicht: nutzungshandbuch/index.md
+    - Registrierung & Anmeldung: nutzungshandbuch/registrierung_anmeldung.md
+    - Entdecken & Suchen: nutzungshandbuch/entdecken_suchen.md
+    - Kommentare: nutzungshandbuch/kommentare.md
+    - Meldung erstellen: nutzungshandbuch/meldung_erstellen.md
+    - Meine Meldungen: nutzungshandbuch/meine_meldungen.md
+    - Favoriten: nutzungshandbuch/favoriten.md
+    - Gespeicherte Suche: nutzungshandbuch/gespeicherte_suche.md
+    - Profil bearbeiten: nutzungshandbuch/profil_bearbeiten.md
+    - Einstellungen: nutzungshandbuch/einstellungen.md
+    - Beispieldaten: nutzungshandbuch/beispieldaten.md

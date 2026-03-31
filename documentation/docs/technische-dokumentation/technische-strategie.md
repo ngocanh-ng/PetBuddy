@@ -12,7 +12,7 @@ Dieses Kapitel beschreibt die bewussten Technologieentscheidungen hinter PetBudd
 
 **Gewählt:** Python 3.13 mit Flet 0.28.3
 
-**Begründung:** Das Team beherrscht Python aus dem Schulunterricht – es war die einzige Programmiersprache, mit der alle Mitglieder vertraut waren. Flet ermöglicht die Entwicklung vollständiger Web- und Desktop-Anwendungen **rein in Python**, ohne JavaScript oder HTML/CSS schreiben zu müssen. Die API orientiert sich an Flutter, einem Framework, das auf der Techniker-Börse als moderner Ansatz für UI-Entwicklung vorgestellt wurde.
+**Begründung:** Das Team beherrscht Python aus dem Schulunterricht – es war die einzige Programmiersprache, mit der alle Mitglieder vertraut waren. Flet ermöglicht die Entwicklung vollständiger Web- und Desktop-Anwendungen **rein in Python**, ohne JavaScript oder HTML/CSS schreiben zu müssen. Flet orientiert sich in seinem Programmiermodell an Flutter, einem Framework, das auf der letztjährigen Techniker-Börse als moderner Ansatz für UI-Entwicklung vorgestellt wurde.
 
 **Verglichene Alternativen:**
 
@@ -47,8 +47,8 @@ Dieses Kapitel beschreibt die bewussten Technologieentscheidungen hinter PetBudd
 **Bewertung:**
 
 - **Wartbarkeit:** Sehr gut – Supabase übernimmt Datenbank-Wartung, Backups und Auth-Logik. Das Team muss sich nur um die Anwendungslogik kümmern.
-- **Skalierbarkeit:** Supabase skaliert die PostgreSQL-Instanz automatisch. Row Level Security (RLS) ermöglicht feingranulare Zugriffskontrolle.
-- **Performance:** PostgreSQL bietet performante Abfragen durch Indizes und optimierte Joins – ideal für die Such- und Filterfunktionen.
+- **Skalierbarkeit:** Supabase skaliert die PostgreSQL-Instanz automatisch. Row Level Security (RLS) sichert den Datenzugriff auf Datenbankebene ab.
+- **Performance:** PostgreSQL bietet performante Abfragen durch Indizes. Die Standortsuche (Umkreisfilter) wird clientseitig per Haversine-Formel berechnet, da eine native Geo-Distanzfunktion in Supabase nicht verfügbar war.
 
 ---
 
@@ -106,6 +106,9 @@ Das Modell basiert auf ImageNet (1000 Klassen) und ist nicht speziell auf Hausti
 
 **Begründung:** Fly.io bietet kostengünstiges Hosting mit Docker-Support und einem Serverstandort in Frankfurt (niedrige Latenz für deutsche Nutzer). Die Konfiguration erfolgt über eine einfache `fly.toml`-Datei und einen Multi-Stage Docker-Build.
 
+!!! info "Python-Version im Docker-Container"
+    Der Docker-Container verwendet **Python 3.11** (statt 3.13), da die PyTorch CPU-only Wheels für Python 3.13 zum Zeitpunkt der Entwicklung nicht zuverlässig verfügbar waren. Lokal wird Python 3.13 verwendet.
+
 **Verglichene Alternativen:**
 
 | Alternative | Warum nicht gewählt |
@@ -135,57 +138,8 @@ Das Modell basiert auf ImageNet (1000 Klassen) und ist nicht speziell auf Hausti
 | **GitBook** | Eingeschränkter Free-Tier, weniger Flexibilität |
 | **Docusaurus** | React-basiert, komplexer aufzusetzen |
 
----
+**Bewertung:**
 
-## Herausforderungen & Lösungen
-
-### OSM-403-Fehler bei der Kartenansicht
-
-**Problem:** Die interaktive Karte (Folium/Leaflet) lieferte einen HTTP-403-Fehler beim Laden der OpenStreetMap-Tiles in einem WebView-Kontext. Der Standard-Tile-Provider von OpenStreetMap blockierte Anfragen ohne korrekten Referrer.
-
-**Lösung:** Der Tile-Provider wurde auf einen alternativen OSM-kompatiblen Provider gewechselt und eine Referrer-Policy im WebView gesetzt, um die Anfragen korrekt zu legitimieren.
-
----
-
-### Fly.io Startup-Fehler
-
-**Problem:** Nach dem Deployment auf Fly.io startete die Anwendung nicht, da `flet-web` als Build-Dependency fehlte und zur Laufzeit nicht verfügbar war.
-
-**Lösung:** `flet-web` wurde als Runtime-Dependency in die `requirements.txt` und den Dockerfile aufgenommen. Zudem wurde der Multi-Stage Docker-Build angepasst, um alle benötigten Pakete korrekt in die finale Image-Stage zu kopieren.
-
----
-
-### KI-Modell nicht pet-spezifisch
-
-**Problem:** Das verwendete Vision-Transformer-Modell (`google/vit-base-patch16-224`) ist ein allgemeines Bilderkennungsmodell (trainiert auf ImageNet mit 1000 Klassen). Es liefert englische Labels wie „golden_retriever" oder „tabby", aber keine deutschen Rassenamen und keine explizite Zuordnung zu „Hund" oder „Katze".
-
-**Lösung:** Es wurde eine eigene Mapping-Logik implementiert:
-
-1. **Tierart-Erkennung:** Über Keyword-Listen werden ImageNet-Labels als „Hund" oder „Katze" klassifiziert.
-2. **Übersetzungstabelle:** Eine manuell gepflegte Tabelle übersetzt die häufigsten englischen Rassenamen ins Deutsche (z. B. „french bulldog" → „Französische Bulldogge").
-3. **Konfidenz-Schwelle:** Ergebnisse mit weniger als 30 % Konfidenz werden als unsicher markiert und der Nutzer wird aufgefordert, die Rasse manuell einzugeben.
-
----
-
-### Mobile Responsiveness
-
-**Problem:** Die Desktop-optimierte UI war auf mobilen Geräten schwer bedienbar – insbesondere der Detail-Dialog, der Kommentar-Bereich und das Navigationsmenü waren zu groß oder schlecht positioniert.
-
-**Lösung:** Die UI-Komponenten wurden schrittweise an mobile Bildschirmgrößen angepasst:
-
-- Detail-Dialog: Vollbild-Darstellung auf kleinen Screens
-- Kommentar-Bereich: Kompaktere Darstellung mit angepassten Abständen
-- Navigation: Wechsel von einer festen Navigation-Bar zu einem Drawer-Menü (Hamburger-Menü)
-- Scrollverhalten: Endloses Scrollen entfernt – Seite scrollt nur bis zur letzten Meldung
-
----
-
-### Umkreissuche mit Koordinaten
-
-**Problem:** Die Suche nach Meldungen in einem bestimmten Umkreis (5/10/25/50 km) erforderte eine Distanzberechnung zwischen Geo-Koordinaten, die nicht nativ in Supabase verfügbar war.
-
-**Lösung:** Die Umkreissuche wurde clientseitig über die **Haversine-Formel** implementiert, die den Abstand zwischen zwei GPS-Koordinaten auf der Erdkugel berechnet. Zusätzlich wurde die UX verbessert:
-
-- Umkreis-Auswahl ist nur möglich, wenn ein Ort angegeben wurde
-- Ergebnisse werden nach Entfernung angereichert und können sortiert werden
-- Mapbox-Geocoding liefert die Koordinaten für den eingegebenen Ortsnamen
+- **Wartbarkeit:** Sehr gut – Dokumentation liegt als Markdown-Dateien direkt im Repository und ist per Git versioniert. Änderungen an Inhalt und Struktur erfordern keine besonderen Werkzeuge.
+- **Skalierbarkeit:** Sehr gut – MkDocs generiert statische HTML-Seiten, die ohne Serverressourcen auskommen und über GitHub Pages kostenlos gehostet werden.
+- **Performance:** Sehr gut – statische Seiten laden schnell, ohne Datenbankabfragen oder dynamische Inhalte.
