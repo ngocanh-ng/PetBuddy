@@ -1,16 +1,29 @@
 # Profil bearbeiten
 
-Menü → **Profil bearbeiten**
+Ihr Profil repräsentiert Sie in der PetBuddy-Community. Es besteht aus einem Benutzernamen und einem optionalen Profilbild. Diese Funktion dient dazu, Ihre öffentlichen Informationen zu verwalten und zu personalisieren.
+
+!!! info "Anmeldung erforderlich"
+    Dieser Bereich ist nur für angemeldete Nutzer zugänglich.
+
+So gelangen Sie zum Profil: Menü → **Profil bearbeiten**
+
+![Profil bearbeiten Menüpunkt](../assets/nutzungshandbuch/profil-bearbeiten-menue.png)
+*Abbildung: Menüpunkt "Profil bearbeiten"*
+
+![Profil bearbeiten Ansicht](../assets/nutzungshandbuch/profil-bearbeiten.png)
+*Abbildung: Bereich "Profil bearbeiten"*
+
+---
 
 ## Benutzername ändern
 
-1. Neuen Namen ins Textfeld eingeben.
-2. **Speichern** klicken.
-3. Der Name wird überall aktualisiert.
+Um unter einem anderen Namen in der App zu erscheinen, geben Sie den neuen Namen in das Textfeld ein und klicken Sie auf **Speichern**. Der Name wird sofort überall aktualisiert.
+
+---
 
 ## Profilbild
 
-- **Hochladen**: Klicke auf **Bild ändern** und wähle ein Bild.
-- **Löschen**: Klicke **„Bild löschen"** — es wird der Standard-Avatar angezeigt.
+Ein Profilbild hilft anderen Nutzern, Sie schneller wiederzuerkennen.
 
-Das Profilbild erscheint neben deinem Namen in Meldungen und Kommentaren.
+- **Hochladen**: Klicken Sie auf **Bild ändern** und wählen Sie ein Bild aus.
+- **Löschen**: Klicken Sie auf **„Bild löschen"**, um zum Standard-Avatar zurückzukehren.

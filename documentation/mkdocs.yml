@@ -6,8 +6,8 @@ repo_name: dietaube007/Projektarbeit_2026
 theme:
   name: material
   language: de
-  favicon: assets/petbuddy_logo_2.png
-  logo: assets/petbuddy_logo.png
+  favicon: assets/logo/petbuddy_logo_2.png
+  logo: assets/logo/petbuddy_logo.png
   palette:
     - scheme: default
       primary: deep purple
@@ -73,11 +73,10 @@ nav:
     - Übersicht: nutzungshandbuch/index.md
     - Registrierung & Anmeldung: nutzungshandbuch/registrierung_anmeldung.md
     - Entdecken & Suchen: nutzungshandbuch/entdecken_suchen.md
-    - Kommentare: nutzungshandbuch/kommentare.md
     - Meldung erstellen: nutzungshandbuch/meldung_erstellen.md
+    - Kommentare: nutzungshandbuch/kommentare.md
     - Meine Meldungen: nutzungshandbuch/meine_meldungen.md
-    - Favoriten: nutzungshandbuch/favoriten.md
-    - Gespeicherte Suche: nutzungshandbuch/gespeicherte_suche.md
+    - Favoriten & Gespeicherte Suchen: nutzungshandbuch/favoriten_gespeicherte_suchen.md
     - Profil bearbeiten: nutzungshandbuch/profil_bearbeiten.md
     - Einstellungen: nutzungshandbuch/einstellungen.md
     - Beispieldaten: nutzungshandbuch/beispieldaten.md

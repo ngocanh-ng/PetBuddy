@@ -2,12 +2,16 @@
 
 Die folgenden Schritte führen von einem leeren Rechner zur lauffähigen PetBuddy-Instanz. Alle Befehle sind für macOS, Linux und Windows angegeben – Abweichungen sind entsprechend markiert.
 
+---
+
 ## 1. Repository klonen
 
 ```bash
 git clone https://github.com/dietaube007/Projektarbeit_2026.git
 cd Projektarbeit_2026
 ```
+
+---
 
 ## 2. Virtuelle Umgebung erstellen und aktivieren
 
@@ -21,6 +25,8 @@ python -m venv .venv
 .venv\Scripts\Activate.ps1
 ```
 
+---
+
 ## 3. Abhängigkeiten installieren
 
 ```bash
@@ -29,6 +35,8 @@ pip install -r requirements.txt
 
 !!! info "Erstinstallation"
     Die Installation kann einige Minuten dauern, da unter anderem PyTorch (~2 GB) für die KI-Rassenerkennung heruntergeladen wird.
+
+---
 
 ## 4. Konfigurationsdatei erstellen
 
@@ -45,6 +53,8 @@ Copy-Item .env.example .env
 
 Danach die Pflicht-Werte in der `.env`-Datei eintragen (siehe Abschnitt [Konfiguration](konfiguration.md)).
 
+---
+
 ## 5. Anwendung starten
 
 ```bash
@@ -56,6 +66,8 @@ python main.py
 ```
 
 Die App startet über Uvicorn und ist unter `http://localhost:8080` erreichbar. Lokal wird der Browser automatisch geöffnet.
+
+---
 
 ## 6. Funktionscheck
 

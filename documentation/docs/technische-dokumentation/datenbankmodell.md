@@ -25,6 +25,6 @@ Die Daten liegen in **Supabase (PostgreSQL)**. Nachfolgend das logische Datenmod
 | Bucket | Zweck | Limits |
 |--------|-------|--------|
 | `pet-images` | Meldungsfotos | max. 10 MB, komprimiert auf 1920×1920 px |
-| `profile-images` | Profilbilder | — |
+| `profile-images` | Profilbilder | max. 10 MB |
 
 ---

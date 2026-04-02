@@ -59,7 +59,9 @@ Neben der Flet-App stellt `main.py` einen FastAPI-Server bereit:
 
 ---
 
-## `utils/` – Hilfsfunktionen
+## `utils/` – Interne Hilfsmodule (nicht Teil der Public API)
+
+Die folgenden Module sind technische Implementierungsdetails und keine externen Schnittstellen.
 
 | Modul | Zweck |
 |-------|-------|

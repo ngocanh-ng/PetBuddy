@@ -30,3 +30,11 @@ PetBuddy folgt einer **Schichtenarchitektur** mit klarer Trennung von UI, Gesch�
 5. Ergebnisse fließen zurück an die UI, die das Rendering aktualisiert.
 
 ---
+
+## Hinweis zu Lookup-Tabellen
+
+Die Lookup-Tabellen für `role` und `account_status` wurden bereits im Datenmodell angelegt, werden in der aktuellen Anwendungsversion jedoch noch nicht aktiv verwendet.
+
+Sie sind als Vorbereitung für zukünftige Funktionen vorgesehen, insbesondere für Moderation und erweiterte Rollen-/Statuslogik.
+
+---
