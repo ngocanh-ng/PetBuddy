@@ -28,3 +28,11 @@ Die Daten liegen in **Supabase (PostgreSQL)**. Nachfolgend das logische Datenmod
 | `profile-images` | Profilbilder | max. 10 MB |
 
 ---
+
+## Hinweis zu Lookup-Tabellen
+
+Die Lookup-Tabellen für `role` und `account_status` wurden bereits im Datenmodell angelegt, werden in der aktuellen Anwendungsversion jedoch noch nicht aktiv verwendet.
+
+Sie sind als Vorbereitung für zukünftige Funktionen vorgesehen, insbesondere für Moderation und erweiterte Rollen-/Statuslogik.
+
+---
