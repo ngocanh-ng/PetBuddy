@@ -73,7 +73,7 @@ Die App startet über Uvicorn und ist unter `http://localhost:8080` erreichbar. 
 
 | Prüfpunkt | Erwartetes Verhalten |
 |------------|---------------------|
-| Startseite öffnet sich | Browser zeigt die Entdecken-Seite |
+| Startseite öffnet sich | Browser zeigt die Startseite |
 | Anmeldung funktioniert | Login mit gültigen Supabase-Zugangsdaten erfolgreich |
 | Meldungen werden geladen | Bestehende Meldungen erscheinen als Karten auf der Startseite |
 | Geocoding liefert Vorschläge | Nur wenn `MAPBOX_TOKEN` gesetzt ist |

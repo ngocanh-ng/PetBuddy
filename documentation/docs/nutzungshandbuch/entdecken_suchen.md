@@ -81,7 +81,7 @@ Klicken Sie auf eine Meldungskarte, um die Detailansicht zu öffnen. Diese enth�
 | **Tierart** | Hund · Katze · Kleintier |
 | **Geschlecht** | Männlich · Weiblich · Unbekannt |
 | **Rasse** | Wird dynamisch nach Tierart geladen |
-| **Ort + Umkreis** | Ortsname eingeben → Autocomplete → Radius wählen (Ganzer Ort / 5 / 10 / 25 / 50 km / ...) |
+| **Ort/PLZ + Umkreis** | Ortsname oder PLZ eingeben → Autocomplete → Radius wählen (Ganzer Ort / 5 / 10 / 25 / 50 km / ...) |
 | **Farben** | Mehrfachauswahl per Checkboxen (aufklappbar) |
 
 Alle Filter können über **„Filter zurücksetzen"** auf den Standard zurückgesetzt werden.

@@ -1,6 +1,6 @@
 # Einstellungen
 
-In diesem Bereich können Sie die Anwendung an Ihre persönlichen Vorlieben anpassen und sicherheitsrelevante Aktionen durchführen. Hier verwalten Sie Ihr Passwort, das Erscheinungsbild der App und können bei Bedarf Ihr Konto löschen.
+In diesem Bereich können Sie die Anwendung an Ihre persönlichen Vorlieben anpassen und sicherheitsrelevante Aktionen durchführen. Hier verwalten Sie Ihr Passwort und können bei Bedarf Ihr Konto löschen.
 
 !!! info "Anmeldung erforderlich"
     Dieser Bereich ist nur für angemeldete Nutzer zugänglich.

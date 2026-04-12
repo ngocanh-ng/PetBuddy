@@ -10,14 +10,20 @@ Projektarbeit_2026/
 │   └── dialogs.py               # Wiederverwendbare Dialoge
 ├── ui/                          # Feature-basierte UI-Module
 │   ├── auth/                    # Anmeldung / Registrierung
+│   │   ├── view.py              # Auth-Seite (Layout + State-Anbindung)
+│   │   ├── components/          # Auth-Komponenten (Formulare, Dialoge)
+│   │   └── handlers/            # Login-, Register- und Reset-Handler
 │   ├── discover/                # Entdecken, Suche, Karte
+│   │   ├── view.py              # Discover-Ansicht
 │   │   ├── components/          # UI-Komponenten (Karten, Filter, Kommentare)
 │   │   ├── handlers/            # Event-Handler (Suche, Favoriten, Kommentare)
 │   │   └── map/                 # Kartenansicht (Folium/Leaflet)
 │   ├── post_form/               # Meldung erstellen / bearbeiten
+│   │   ├── view.py              # Formular-Ansicht für Meldungen
 │   │   ├── components/          # Formular-Komponenten
 │   │   └── handlers/            # Upload, KI-Erkennung, Referenzdaten
 │   ├── profile/                 # Profil, Favoriten, Einstellungen
+│   │   ├── view.py              # Profil-Ansicht
 │   │   ├── components/          # Profil-Komponenten
 │   │   └── handlers/            # Profil-Handler
 │   ├── theme.py                 # ThemeManager (Hell/Dunkel)
@@ -27,6 +33,10 @@ Projektarbeit_2026/
 ├── services/                    # Geschäftslogik & Datenzugriff
 │   ├── supabase_client.py       # Singleton Supabase-Client
 │   ├── account/                 # Auth, Profil, Löschung
+│   │   ├── auth.py              # AuthService (Login, Registrierung, Reset)
+│   │   ├── profile.py           # ProfileService (Profil lesen/aktualisieren)
+│   │   ├── profile_image.py     # ProfileImageService (Bild hochladen/löschen)
+│   │   └── account_deletion.py  # AccountDeletionService (kaskadierte Löschung)
 │   ├── posts/                   # CRUD, Suche, Kommentare
 │   │   ├── post.py              # PostService (CRUD)
 │   │   ├── search.py            # SearchService (Filter + Sortierung)

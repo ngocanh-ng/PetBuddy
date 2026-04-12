@@ -40,7 +40,7 @@ Dieses Szenario führt Sie durch den Prozess der Erstellung einer neuen Meldung 
 Dieses Szenario zeigt Ihnen, wie Sie die Filterfunktionen nutzen, um gezielt nach einem Tier zu suchen.
 
 1.  **Filter anwenden:** Gehen Sie zur Startseite und setzen Sie die Filter:
-    -   **Status:** `Vermisst`
+    -   **Kategorie:** `Vermisst`
     -   **Tierart:** `Katze`
     -   **Ort:** `Nürnberg`
 2.  **Ergebnisse prüfen:** Die Ansicht aktualisiert sich automatisch und zeigt nur die Meldungen an, die Ihren Kriterien entsprechen.
@@ -56,7 +56,7 @@ Lernen Sie, wie Sie relevante Meldungen für einen späteren schnellen Zugriff s
 Dieses Szenario zeigt, wie Sie mit anderen Nutzern über eine Meldung kommunizieren können.
 
 1.  **Meldung öffnen:** Klicken Sie auf eine Meldung, um die Detailansicht zu öffnen.
-2.  **Kommentar schreiben:** Geben Sie einen Test-Kommentar in das Textfeld ein und klicken Sie auf **Absenden**.
+2.  **Kommentar schreiben:** Geben Sie einen Test-Kommentar in das Textfeld ein und klicken Sie auf **Absenden-Symbol**.
 3.  **Antworten (optional):** Testen Sie die Antwortfunktion, indem Sie auf Ihren eigenen Kommentar antworten.
 
 ### Szenario 5: Die KI-Rassenerkennung nutzen
@@ -70,7 +70,7 @@ Dieses Szenario demonstriert die automatische Erkennung von Tierart und Rasse be
 ### Szenario 6: Eine Suche speichern und anwenden
 Lernen Sie, wie Sie wiederkehrende Suchanfragen für eine schnelle Wiederverwendung speichern.
 
-1.  **Filter setzen:** Stellen Sie beliebige Filter ein (z.B. Tierart "Hund" in "Berlin").
+1.  **Filter setzen:** Stellen Sie beliebige Filter ein (z.B. Tierart "Hund" in "Nürnberg").
 2.  **Suche speichern:** Klicken Sie auf **„Suche speichern"** und geben Sie einen Namen ein.
 3.  **Suche anwenden:** Gehen Sie ins Menü zu **Gespeicherte Suche** und klicken Sie auf **Suche anwenden**, um die Filter erneut zu laden.
 
@@ -78,6 +78,6 @@ Lernen Sie, wie Sie wiederkehrende Suchanfragen für eine schnelle Wiederverwend
 Dieses Szenario zeigt, wie Sie eine Meldung als PDF-Datei für einen physischen Aushang exportieren.
 
 1.  **Eigene Meldungen öffnen:** Gehen Sie im Menü zu **Meine Meldungen**.
-2.  **PDF-Export starten:** Klicken Sie auf das **PDF-Symbol** neben einer Ihrer Meldungen.
+2.  **PDF-Export starten:** Klicken Sie auf das **PDF-Symbol** unter einer Ihrer Meldungen.
 3.  **Kontaktdaten eingeben:** Fügen Sie optional Ihre Telefonnummer oder E-Mail hinzu.
 4.  **PDF herunterladen:** Laden Sie das generierte PDF herunter.

@@ -19,7 +19,7 @@ Um einen Hinweis zu hinterlassen oder eine Frage zu stellen, gehen Sie wie folgt
 
 1. Öffnen Sie die Detailansicht einer Meldung.
 2. Geben Sie Ihren Text in das Textfeld ein (max. 1.000 Zeichen, Shift+Enter für Zeilenumbruch).
-3. Klicken Sie auf **Absenden**.
+3. Klicken Sie auf das **Absenden-Symbol**.
 
 !!! info "Anmeldung erforderlich"
     Zum Schreiben, Antworten und Reagieren auf Kommentare müssen Sie angemeldet sein.
