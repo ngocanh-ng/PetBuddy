@@ -9,13 +9,13 @@ Nutzer können Meldungen erstellen, Fundtiere auf einer Karte entdecken und per 
 
 Die vollständige Anleitung steht in MkDocs:
 
-- Installation & Quickstart: https://dietaube007.github.io/Projektarbeit_2026/installation-quickstart/
+- Installation & Quickstart: https://ngocanh-ng.github.io/PetBuddy/installation-quickstart/
 
 ## Dokumentation
 
 Die gesamte Projekt- und Nutzerdokumentation wird mit MkDocs verwaltet und umfasst technische Details, Architektur und ein Nutzungshandbuch.
 
-- Live: https://dietaube007.github.io/Projektarbeit_2026/
+- Live: https://ngocanh-ng.github.io/PetBuddy/
 - Lokal: `uv run mkdocs serve -f documentation/mkdocs.yml`
 
 ## Support
